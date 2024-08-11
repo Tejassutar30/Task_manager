@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31 Jul, 2024, 8:10:04 PM
+    Author     : Tejas S. Sutar
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border: border-box;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+form{
+    height: 100%;
+    width: 100%;
+    dispaly: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #effaf7;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #a9f7e1;
+    box-shadow: 10px 10px 5px lightblue;
+}
+label{
+    padding-bottom: 10px;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+.row{
+    margin-bottom: 30px;
+}
+input[type=text]{
+    background-color: whitesmoke;
+}
+select{
+    background-color: whitesmoke;
+}
+input[type=submit]{
+    background-color: rgb(38, 154, 249);
+    color: white;
+    font-weight: bolder;
+}
+input[type=reset]{
+    background-color: rgb(255, 96, 96);
+    font-weight: bolder;
+}
