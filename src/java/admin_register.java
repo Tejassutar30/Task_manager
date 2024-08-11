@@ -26,7 +26,8 @@ public class admin_register extends HttpServlet {
         String admin_contact=req.getParameter("acontact");
         String admin_email=req.getParameter("aemail");
         String admin_password=req.getParameter("apass");
-        String admin_confirm_password=req.getParameter("acon_pass");  
+        String admin_confirm_password=req.getParameter("acon_pass");
+        String admin_id=req.getParameter("admin_id");
         String event=req.getParameter("btn");
         
         
@@ -45,6 +46,11 @@ public class admin_register extends HttpServlet {
         {
             String insert=db.Query("insert into admin_register(admin_name,address,contact,email_id,password)values('"+admin_name+"','"+admin_address+"','"+admin_contact+"','"+admin_email+"','"+admin_password+"')", "Record Inserted");
             out.println(insert);
+        }
+ 
+        if(event.equals("Delete"))
+        {
+            String delete=db.Query("delete from admin_register where admin_id='"+admin_id+"'", "Record Deleted");
         }
     }
 

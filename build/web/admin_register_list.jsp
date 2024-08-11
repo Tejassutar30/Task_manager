@@ -29,6 +29,7 @@
                     <th scope="col">Contact</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,13 +48,17 @@
                         {
                 %>
                 <tr>
+                <form action="admin_register" method="POST">
+                    <input type="hidden" name="admin_id" value="<%=rs.getString("admin_id")%>">
                     <th scope="row"><%=i++%></th>
                     <td><%=rs.getString("admin_name")%></td>
                     <td><%=rs.getString("address")%></td>
                     <td><%=rs.getString("contact")%></td>
                     <td><%=rs.getString("email_id")%></td>
                     <td><%=rs.getString("password")%></td>
-                </tr>
+                    <td><input type="submit" name="btn" value="Delete" class="btn btn-danger"></td>
+                </form>
+                </tr>  
                 <%
                         }
                     }
