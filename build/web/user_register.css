@@ -4,12 +4,14 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 27 Jul, 2024, 12:10:02 PM
+    Created on : 12 Aug, 2024, 7:43:49 PM
     Author     : Tejas S. Sutar
 */
+
 *{
     padding: 0px;
     margin: 0px;
+    border: border-box;
     box-sizing: border-box;
 }
 html{
@@ -21,6 +23,13 @@ body{
     width: 100%;
     display: flex;
 }
+form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .main{
     height: 100%;
     width: 100%;
@@ -28,30 +37,30 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #e3f4ef;
+    background-color: #dde0ee;
 }
 .title{
     height: 50px;
     width: 800px;
     margin-bottom: 20px;
     color: #115844;
-    background-color: #a9f7e1;
+    background-color: #a5a7ee;
     border-radius: 15px;
-    box-shadow: 8px 8px 5px lightblue;
+    box-shadow: 8px 8px 5px rgb(104, 118, 165);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .box{
-    height: 450px;
+    height: 480px;
     width: 800px;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     padding: 20px;
-    background-color: #a9f7e1;
-    box-shadow: 10px 10px 5px lightblue;
+    background-color: #a5a7ee;
+    box-shadow: 10px 10px 5px rgb(104, 118, 165);
 }
 .box1{
     display: flex;
@@ -119,7 +128,7 @@ input[type=number]{
 textarea{
     border-radius: 25px;
     padding: 10px 15px;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
     border: none;
     border-bottom: solid 2px;
     background-color: whitesmoke;

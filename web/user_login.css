@@ -4,9 +4,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 27 Jul, 2024, 12:10:02 PM
+    Created on : 12 Aug, 2024, 7:50:18 PM
     Author     : Tejas S. Sutar
 */
+
 *{
     padding: 0px;
     margin: 0px;
@@ -21,23 +22,30 @@ body{
     width: 100%;
     display: flex;
 }
+form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .main{
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: #e3f4ef;
+    background-color: #dde0ee;
 }
 .title{
     height: 50px;
-    width: 800px;
+    width: 400px;
     margin-bottom: 20px;
     color: #115844;
-    background-color: #a9f7e1;
+    background-color: #a5a7ee;
     border-radius: 15px;
-    box-shadow: 8px 8px 5px lightblue;
+    box-shadow: 8px 8px 5px rgb(104, 118, 165);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -45,42 +53,22 @@ body{
 }
 .box{
     height: 450px;
-    width: 800px;
+    width: 400px;
     display: flex;
     flex-direction: column;
+    padding: 25px;
     border-radius: 15px;
-    padding: 20px;
-    background-color: #a9f7e1;
-    box-shadow: 10px 10px 5px lightblue;
+    background-color: #a5a7ee;
+    box-shadow: 10px 10px 5px rgb(104, 118, 165);
 }
-.box1{
-    display: flex;
-}
-.box1_1{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding-right: 30px;
-}
-.vertical_line{
-    border: solid 1px;
-    margin: 20px 0px 30px 0px;
-    box-shadow: 0px 0px 5px rgb(70, 69, 69);
-}
-.box1_2{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding-left: 30px;
-}
-.register{
+.login{
     font-family: sans-serif;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     padding: 25px 0px 30px 0px;
     color: #0b3a2d;
 }
-label{
+.lbl{
     padding: 0px 0px 5px 17px;
     color: black;
 }
@@ -100,29 +88,12 @@ input[type=password]{
     border-bottom: solid 2px;
     background-color: whitesmoke;
 }
-input[type=text]{
-    border-radius: 25px;
-    padding: 10px 15px;
+.check{
+    display: flex;
+    padding-left: 17px;
     margin-bottom: 25px;
-    border: none;
-    border-bottom: solid 2px;
-    background-color: whitesmoke;
-}
-input[type=number]{
-    border-radius: 25px;
-    padding: 10px 15px;
-    margin-bottom: 25px;
-    border: none;
-    border-bottom: solid 2px;
-    background-color: whitesmoke;
-}
-textarea{
-    border-radius: 25px;
-    padding: 10px 15px;
-    margin-bottom: 25px;
-    border: none;
-    border-bottom: solid 2px;
-    background-color: whitesmoke;
+    gap: 5px;
+    color: black;
 }
 input[type=submit]{
     border-radius: 25px;
@@ -134,4 +105,8 @@ input[type=submit]{
     color: white;
     border: none;
     border-bottom: solid 2px black;
+}
+p{
+    text-align: center;
+    color: black;
 }

@@ -1,22 +1,20 @@
 <%-- 
-    Document   : admin_login
-    Created on : 27 Jul, 2024, 12:01:57 PM
+    Document   : user_login
+    Created on : 12 Aug, 2024, 7:48:24 PM
     Author     : Tejas S. Sutar
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
-    <link rel="stylesheet" href="admin_login.css">
-    <script type="text/javascript" src="validation.js"></script>
-</head>
-<body>
-    <div class="main">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>User Login</title>
+        <link rel="stylesheet" href="user_login.css">
+    </head>
+    <body>
         <form>
+        <div class="main">
         <div class="title">
             <h1>Welcome Back!</h1>
         </div>
@@ -33,10 +31,9 @@
                 <label for="check">Remember me</label>
             </div>
             <input type="submit" value="Login">
-            
             <p>Don't have an account? <a href="">Register here</a></p>
         </div>
+        </div>
         </form>
-    </div>
-</body>
+    </body>
 </html>
