@@ -39,7 +39,7 @@ public class admin_addtask extends HttpServlet {
         String result=db.dbconnect();
         out.println(result);
         
-        if(event.equals("Register"))
+        if(event.equals("Add"))
         {
             String insert=db.Query("insert into admin_addtask(task_name,project_name,owner_name,priority,description)values('"+task_name+"','"+project_name+"','"+owner_name+"','"+priority+"','"+description+"')", "Record Inserted");
             out.println(insert);

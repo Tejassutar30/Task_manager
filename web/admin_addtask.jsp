@@ -40,10 +40,10 @@
                 <div class="col-sm-2">
                     <label for="">Choose Priority</label>
                     <select name="prio" id="" class="form-control" required="">
-                        <option value="">None</option>
-                        <option value="">High</option>
-                        <option value="">Medium</option>
-                        <option value="">Low</option>
+                        <option >None</option>
+                        <option >High</option>
+                        <option >Medium</option>
+                        <option >Low</option>
                     </select>
                 </div>
                 <div class="col-sm-5">

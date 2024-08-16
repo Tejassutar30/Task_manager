@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="container">
-            <h2>Task List</h2>
+            <h2>Admin List</h2>
             <br>
             <table class="table table-striped">
             <thead>
