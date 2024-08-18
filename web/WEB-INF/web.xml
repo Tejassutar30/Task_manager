@@ -8,6 +8,10 @@
         <servlet-name>admin_addtask</servlet-name>
         <servlet-class>admin_addtask</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>admin_login</servlet-name>
+        <servlet-class>admin_login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>admin_register</servlet-name>
         <url-pattern>/admin_register</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>admin_addtask</servlet-name>
         <url-pattern>/admin_addtask</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>admin_login</servlet-name>
+        <url-pattern>/admin_login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

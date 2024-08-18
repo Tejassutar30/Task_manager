@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="main">
-        <form>
+        <form action="admin_login" method="POST">
         <div class="title">
             <h1>Welcome Back!</h1>
         </div>
@@ -25,14 +25,14 @@
                 <h2>Login</h2>
             </div>
             <label for="" class="lbl">Username</label>
-            <input type="email" placeholder="Enter email" required="">
+            <input type="email" name="email" placeholder="Enter email" required="">
             <label for="" class="lbl">Password</label>
-            <input type="password" placeholder="Enter password" required="" pattern="\d{6}">
+            <input type="password" name="password" placeholder="Enter password" required="" pattern="\d{6}">
             <div class="check">
                 <input type="checkbox" id="check">
                 <label for="check">Remember me</label>
             </div>
-            <input type="submit" value="Login">
+            <input type="submit" name="btn" value="Login">
             
             <p>Don't have an account? <a href="">Register here</a></p>
         </div>

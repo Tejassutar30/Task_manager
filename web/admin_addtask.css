@@ -11,7 +11,6 @@ and open the template in the editor.
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    border: border-box;
 }
 html{
     height: 100%;
@@ -22,14 +21,14 @@ body{
     width: 100%;
 }
 form{
-    height: 100%;
+    height: 90%;
     width: 100%;
-    dispaly: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 .main{
-    height: 90%;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
