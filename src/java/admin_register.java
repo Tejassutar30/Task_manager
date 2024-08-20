@@ -51,6 +51,13 @@ public class admin_register extends HttpServlet {
         if(event.equals("Delete"))
         {
             String delete=db.Query("delete from admin_register where admin_id='"+admin_id+"'", "Record Deleted");
+            out.println(delete);
+        }
+        
+         if(event.equals("Update"))
+        {
+            String update=db.Query("update admin_register set admin_name='"+admin_name+"',address='"+admin_address+"',contact='"+admin_contact+"',email_id='"+admin_email+"',password='"+admin_password+"' where admin_id='"+admin_id+"'", "Record Updated");
+            out.println(update);
         }
     }
 

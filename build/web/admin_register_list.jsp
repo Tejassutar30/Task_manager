@@ -18,6 +18,7 @@
     </head>
     <body>
         <div class="container">
+            <br>
             <h2>Admin List</h2>
             <br>
             <table class="table table-striped">
@@ -29,6 +30,7 @@
                     <th scope="col">Contact</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
+                    <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
             </thead>
@@ -51,11 +53,12 @@
                 <form action="admin_register" method="POST">
                     <input type="hidden" name="admin_id" value="<%=rs.getString("admin_id")%>">
                     <th scope="row"><%=i++%></th>
-                    <td><%=rs.getString("admin_name")%></td>
-                    <td><%=rs.getString("address")%></td>
-                    <td><%=rs.getString("contact")%></td>
-                    <td><%=rs.getString("email_id")%></td>
-                    <td><%=rs.getString("password")%></td>
+                    <td><input type="text" name="aname" value="<%=rs.getString("admin_name")%>" class="form-control"></td>
+                    <td><input type="text" name="a_address" value="<%=rs.getString("address")%>" class="form-control"></td>
+                    <td><input type="text" name="acontact" value="<%=rs.getString("contact")%>" class="form-control"></td>
+                    <td><input type="text" name="aemail" value="<%=rs.getString("email_id")%>" class="form-control"></td>
+                    <td><input type="text" name="apass" value="<%=rs.getString("password")%>" class="form-control"></td>
+                    <td><input type="submit" name="btn" value="Update" class="btn btn-success"></td>
                     <td><input type="submit" name="btn" value="Delete" class="btn btn-danger"></td>
                 </form>
                 </tr>  
