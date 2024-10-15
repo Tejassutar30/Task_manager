@@ -15,50 +15,43 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Tejas S. Sutar
  */
-public class admin_addtask extends HttpServlet {
+public class admin_addinstruction extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out=resp.getWriter();
         
-        String task_name=req.getParameter("tname");
-        String project_name=req.getParameter("pname");
-        String priority=req.getParameter("prio");
+        String instruction_name=req.getParameter("iname");
         String description=req.getParameter("desc");
-        String owner_name=req.getParameter("oname");
-        String task_id=req.getParameter("task_id");
+        String inst_id=req.getParameter("inst_id");
         String event=req.getParameter("btn");
         
         
-        out.println(task_name);
-        out.println(project_name);
-        out.println(priority);
+        out.println(instruction_name);
         out.println(description);
-        out.println(owner_name);
+        
         
         Database db=new Database();
         String result=db.dbconnect();
         out.println(result);
         
+        
         if(event.equals("Add"))
         {
-            String insert=db.Query("insert into admin_addtask(task_name,project_name,owner_name,priority,description)values('"+task_name+"','"+project_name+"','"+owner_name+"','"+priority+"','"+description+"')", "Record Inserted");
+            String insert=db.Query("insert into admin_instruction(instruction_name,description)values('"+instruction_name+"','"+description+"')", "Record Inserted");
             out.println(insert);
         }
         if(event.equals("Delete"))
         {
-            String delete=db.Query("delete from admin_addtask where task_id='"+task_id+"'", "Record Deleted");
+            String delete=db.Query("delete from admin_instruction where inst_id='"+inst_id+"'", "Record Deleted");
             out.println(delete);
         }
         
          if(event.equals("Update"))
         {
-            String update=db.Query("update admin_addtask set task_name='"+task_name+"',project_name='"+project_name+"',priority='"+priority+"',description='"+description+"',owner_name='"+owner_name+"' where task_id='"+task_id+"'", "Record Updated");
+            String update=db.Query("update admin_instruction set instruction_name='"+instruction_name+"',description='"+description+"' where inst_id='"+inst_id+"'", "Record Updated");
             out.println(update);
         }
-        
-        
     }
-    
 
 }
