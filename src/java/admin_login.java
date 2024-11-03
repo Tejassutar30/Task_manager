@@ -46,7 +46,7 @@ public class admin_login extends HttpServlet {
                 ResultSet rs=st.executeQuery(sql);
                 if(rs.next())
                 {
-                    resp.sendRedirect("admin_addtask.jsp");
+                    resp.sendRedirect("admin_home.jsp");
                 }
                 else
                 {

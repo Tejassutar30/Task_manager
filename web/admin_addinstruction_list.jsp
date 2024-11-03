@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Instruction List</title>
+        <title>Custom Instruction List</title>
         <%@include file="admin_header.jsp" %>
     </head>
     <body>

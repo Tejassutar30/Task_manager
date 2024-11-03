@@ -46,7 +46,7 @@ public class user_login extends HttpServlet {
                 ResultSet rs=st.executeQuery(sql);
                 if(rs.next())
                 {
-                    resp.sendRedirect("user_register.jsp");
+                    resp.sendRedirect("user_home.jsp");
                 }
                 else
                 {

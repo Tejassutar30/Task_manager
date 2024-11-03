@@ -24,7 +24,7 @@
 		<input type="text" name="iname" placeholder="Enter instruction name">
 		<label>Description</label>
                 <textarea name="desc" placeholder="Enter description"></textarea>
-                <input type="submit" name="btn" value="Add">
+                <input type="submit" href="admin_addinstruction_list.jsp" name="btn" value="Add">
 	</div>
         </form>
     </body>

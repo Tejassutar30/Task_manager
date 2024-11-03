@@ -26,6 +26,7 @@ public class admin_addtask extends HttpServlet {
         String priority=req.getParameter("prio");
         String description=req.getParameter("desc");
         String owner_name=req.getParameter("oname");
+        String employee_name=req.getParameter("ename");
         String task_id=req.getParameter("task_id");
         String event=req.getParameter("btn");
         
@@ -35,6 +36,7 @@ public class admin_addtask extends HttpServlet {
         out.println(priority);
         out.println(description);
         out.println(owner_name);
+        out.println(employee_name);
         
         Database db=new Database();
         String result=db.dbconnect();
@@ -42,19 +44,31 @@ public class admin_addtask extends HttpServlet {
         
         if(event.equals("Add"))
         {
-            String insert=db.Query("insert into admin_addtask(task_name,project_name,owner_name,priority,description)values('"+task_name+"','"+project_name+"','"+owner_name+"','"+priority+"','"+description+"')", "Record Inserted");
-            out.println(insert);
+            String insert=db.Query("insert into admin_addtask(task_name,project_name,owner_name,priority,description,employee_name)values('"+task_name+"','"+project_name+"','"+owner_name+"','"+priority+"','"+description+"','"+employee_name+"')", "Record Inserted");
+            if (insert.contains("Record Inserted")) {
+                resp.sendRedirect("admin_addtask_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
         if(event.equals("Delete"))
         {
             String delete=db.Query("delete from admin_addtask where task_id='"+task_id+"'", "Record Deleted");
-            out.println(delete);
+            if (delete.contains("Record Deleted")) {
+                resp.sendRedirect("admin_addtask_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
         
          if(event.equals("Update"))
         {
-            String update=db.Query("update admin_addtask set task_name='"+task_name+"',project_name='"+project_name+"',priority='"+priority+"',description='"+description+"',owner_name='"+owner_name+"' where task_id='"+task_id+"'", "Record Updated");
-            out.println(update);
+            String update=db.Query("update admin_addtask set task_name='"+task_name+"',project_name='"+project_name+"',priority='"+priority+"',description='"+description+"',owner_name='"+owner_name+"',employee_name='"+employee_name+"' where task_id='"+task_id+"'", "Record Updated");
+            if (update.contains("Record Updated")) {
+                resp.sendRedirect("admin_addtask_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
         
         

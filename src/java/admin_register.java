@@ -45,19 +45,31 @@ public class admin_register extends HttpServlet {
         if(event.equals("Register"))
         {
             String insert=db.Query("insert into admin_register(admin_name,address,contact,email_id,password)values('"+admin_name+"','"+admin_address+"','"+admin_contact+"','"+admin_email+"','"+admin_password+"')", "Record Inserted");
-            out.println(insert);
+            if (insert.contains("Record Inserted")) {
+                resp.sendRedirect("admin_login.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
  
         if(event.equals("Delete"))
         {
             String delete=db.Query("delete from admin_register where admin_id='"+admin_id+"'", "Record Deleted");
-            out.println(delete);
+            if (delete.contains("Record Deleted")) {
+                resp.sendRedirect("admin_register_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
         
          if(event.equals("Update"))
         {
             String update=db.Query("update admin_register set admin_name='"+admin_name+"',address='"+admin_address+"',contact='"+admin_contact+"',email_id='"+admin_email+"',password='"+admin_password+"' where admin_id='"+admin_id+"'", "Record Updated");
-            out.println(update);
+            if (update.contains("Record Updated")) {
+                resp.sendRedirect("admin_register_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
     }
 

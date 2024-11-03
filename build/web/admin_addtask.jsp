@@ -13,33 +13,33 @@
         <%@include file="admin_header.jsp"%>
         <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="stylesheet" href="admin_addtask.css">
-        <script type="text/javascript" src="validation.js"></script>
     </head>
     <body>
-        <form action="admin_addtask" method="post">
+        <form id="form" action="admin_addtask" method="post">
         <div class="main">
         <div class="container">
             <div class="row">
                 <p>Add task</p>
             </div>
             <div class="row">
-                <div class="col-sm-2">
-                    <label for="">Serial no.</label>
-                </div>
                 <div class="col-sm-5">
-                    <label for="">Task Name</label>
+                    <label>Task Name</label>
                     <input type="text" name="tname" placeholder="Enter task name" class="form-control" required="">
                 </div>
                 <div class="col-sm-5">
-                    <label for="">Project Name</label>
-                    <input type="text" name="pname" placeholder="Enter project name" class="form-control" required="">
+                    <label>Description</label>
+                    <input type="text" name="desc" placeholder="Enter description" class="form-control" required="">
+                </div>
+                <div class="col-sm-2">
+                    <label>Employee Name</label>
+                    <input type="text" name="ename" placeholder="Enter employee name" class="form-control" required="">
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-sm-2">
-                    <label for="">Choose Priority</label>
-                    <select name="prio" id="" class="form-control" required="">
+                    <label>Choose Priority</label>
+                    <select name="prio" class="form-control" required="">
                         <option >None</option>
                         <option >High</option>
                         <option >Medium</option>
@@ -47,11 +47,11 @@
                     </select>
                 </div>
                 <div class="col-sm-5">
-                    <label for="">Description</label>
-                    <input type="text" name="desc" placeholder="Enter description" class="form-control" required="">
+                    <label>Project Name</label>
+                    <input type="text" name="pname" placeholder="Enter project name" class="form-control" required="">
                 </div>
                 <div class="col-sm-5">
-                    <label for="">Owner Name</label>
+                    <label>Owner Name</label>
                     <input type="text" name="oname" placeholder="Enter owner name" class="form-control" required="">
                 </div>
             </div>

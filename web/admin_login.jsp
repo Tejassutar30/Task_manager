@@ -32,11 +32,29 @@
                 <input type="checkbox" id="check">
                 <label for="check">Remember me</label>
             </div>
-            <input type="submit" name="btn" value="Login">
+            <input type="submit" name="btn" href="admin_home.jsp" value="Login">
             
-            <p>Don't have an account? <a href="">Register here</a></p>
+            <p>Don't have an account? <a href="admin_register.jsp">Register here</a></p>
         </div>
         </form>
     </div>
 </body>
 </html>
+
+
+<!--<!DOCTYPE html>
+
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>-->

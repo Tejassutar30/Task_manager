@@ -29,29 +29,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="admin_home.jsp">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link active" aria-current="page" href="user_register_list.jsp">Employee List</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <a class="nav-link active" href="admin_addtask_list.jsp" role="button" data-bs-toggle="dropdown" aria-expanded="true">Task List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link active" href="admin_addtask.jsp">Add Task</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="admin_addinstruction.jsp">Add Instruction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="admin_addinstruction_list.jsp">Instruction List</a>
+        </li>
+<!--        <li class="nav-item">
+          <a class="nav-link active" href="admin_assigntask.jsp">Assign Task</a>
+        </li>-->
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-danger" type="submit" style="background-color: crimson; margin-right: 5px;"><a href="admin_login.jsp" style="text-decoration: none; color: black;">Logout</a></button>
+          <button class="btn btn-outline-danger" type="submit" style="background-color: crimson;"><a href="index.html" style="text-decoration: none; color: black;">Signout</a></button>
       </form>
     </div>
   </div>

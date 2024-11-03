@@ -52,6 +52,7 @@
                 <tr>
                 <form action="admin_addtask" method="POST">
                     <input type="hidden" name="task_id" value="<%=rs.getString("task_id")%>">
+                    <input type="hidden" name="ename" value="<%=rs.getString("employee_name")%>">
                     <th scope="row"><%=i++%></th>
                     <td><input type="text" name="tname" value="<%=rs.getString("task_name")%>" class="form-control"></td>
                     <td><input type="text" name="pname" value="<%=rs.getString("project_name")%>" class="form-control"></td>

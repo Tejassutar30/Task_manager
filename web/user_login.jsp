@@ -30,8 +30,8 @@
                 <input type="checkbox" id="check">
                 <label for="check">Remember me</label>
             </div>
-            <input type="submit" name="btn" value="Login">
-            <p>Don't have an account? <a href="">Register here</a></p>
+            <input type="submit" href="user_home.jsp" name="btn" value="Login">
+            <p>Don't have an account? <a href="user_register.jsp">Register here</a></p>
         </div>
         </div>
         </form>

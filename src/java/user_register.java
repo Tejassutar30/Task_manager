@@ -28,7 +28,7 @@ public class user_register extends HttpServlet {
         String user_password=req.getParameter("upass");
         String user_confirm_password=req.getParameter("ucon_pass");
         String occupation=req.getParameter("occup");
-//        String user_id=req.getParameter("user_id");
+        String user_id=req.getParameter("user_id");
         String event=req.getParameter("btn");
         
         
@@ -50,18 +50,17 @@ public class user_register extends HttpServlet {
             out.println(insert);
         }
  
-//        if(event.equals("Delete"))
-//        {
-//            String delete=db.Query("delete from employee_register where admin_id='"+admin_id+"'", "Record Deleted");
-//            out.println(delete);
-//        }
-//        
-//         if(event.equals("Update"))
-//        {
-//            String update=db.Query("update employee_register set admin_name='"+admin_name+"',address='"+admin_address+"',contact='"+admin_contact+"',email_id='"+admin_email+"',password='"+admin_password+"' where admin_id='"+admin_id+"'", "Record Updated");
-//            out.println(update);
-//        }
+        if(event.equals("Delete"))
+        {
+            String delete=db.Query("delete from employee_register where emp_id='"+user_id+"'", "Record Deleted");
+            out.println(delete);
+        }
+        
+         if(event.equals("Update"))
+        {
+            String update=db.Query("update employee_register set employee_name='"+user_name+"',address='"+user_address+"',contact='"+user_contact+"',email_id='"+user_email+"',password='"+user_password+"',occupation='"+occupation+"' where emp_id='"+user_id+"'", "Record Updated");
+            out.println(update);
+        }
     }
-
-    
+  
 }

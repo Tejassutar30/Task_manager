@@ -39,18 +39,30 @@ public class admin_addinstruction extends HttpServlet {
         if(event.equals("Add"))
         {
             String insert=db.Query("insert into admin_instruction(instruction_name,description)values('"+instruction_name+"','"+description+"')", "Record Inserted");
-            out.println(insert);
+            if (insert.contains("Record Inserted")) {
+                resp.sendRedirect("admin_addinstruction_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
         if(event.equals("Delete"))
         {
             String delete=db.Query("delete from admin_instruction where inst_id='"+inst_id+"'", "Record Deleted");
-            out.println(delete);
+            if (delete.contains("Record Deleted")) {
+                resp.sendRedirect("admin_addinstruction_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
         
          if(event.equals("Update"))
         {
             String update=db.Query("update admin_instruction set instruction_name='"+instruction_name+"',description='"+description+"' where inst_id='"+inst_id+"'", "Record Updated");
-            out.println(update);
+            if (update.contains("Record Updated")) {
+                resp.sendRedirect("admin_addinstruction_list.jsp");  // Redirects to login page
+            } else {
+                resp.sendRedirect("error.jsp");  // Redirects to an error page in case of failure
+            }
         }
     }
 
